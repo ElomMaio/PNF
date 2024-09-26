@@ -25,7 +25,7 @@ CREATE TABLE forms_prefeitura (
 );
 
 CREATE TABLE prefeituras_identificacao (
-    id_prefeituras INT SERIAL PRIMARY KEY NOT NULL,
+    id_prefeituras SERIAL PRIMARY KEY NOT NULL,
     id_relatorio VARCHAR,
     razao_social TEXT,
     cnpj VARCHAR,
@@ -46,7 +46,7 @@ CREATE TABLE tbl_prefeituras_servicos (
 );
 
 CREATE TABLE prefeituras_servicos (
-    id_servico INT SERIAL PRIMARY KEY NOT NULL,
+    id_servico SERIAL PRIMARY KEY NOT NULL,
     id_relatorio VARCHAR,
     id_prefeitura_servico INT,
     CONSTRAINT fk_tbl_prefeituras_servicos
@@ -58,7 +58,7 @@ CREATE TABLE prefeituras_servicos (
 );
 
 CREATE TABLE prefeituras_responsaveis (
-    id_responsavel INT SERIAL PRIMARY KEY,
+    id_responsavel SERIAL PRIMARY KEY,
     id_relatorio VARCHAR,
     nome TEXT,
     documento TEXT,
@@ -69,7 +69,7 @@ CREATE TABLE prefeituras_responsaveis (
 );
 
 CREATE TABLE prefeituras_rhs (
-    id_rh INT SERIAL PRIMARY KEY NOT NULL,
+    id_rh SERIAL PRIMARY KEY NOT NULL,
     id_relatorio VARCHAR,
     rh_nome TEXT,
     rh_formacao VARCHAR,
@@ -83,7 +83,7 @@ CREATE TABLE prefeituras_rhs (
 );
 
 CREATE TABLE prefeituras_pcps (
-    id_pcp INT SERIAL PRIMARY KEY NOT NULL,
+    id_pcp SERIAL PRIMARY KEY NOT NULL,
     id_relatorio VARCHAR, 
     pcp_possui_art BOOL,
     pcp_art_codigo VARCHAR,
@@ -95,7 +95,7 @@ CREATE TABLE prefeituras_pcps (
 );
 
 CREATE TABLE prefeituras_clinhvs (
-    id_clinhv INT SERIAL PRIMARY KEY NOT NULL,
+    id_clinhv SERIAL PRIMARY KEY NOT NULL,
     id_relatorio VARCHAR,
     clinhv_art BOOL,
     clinhv_art_registro VARCHAR,
@@ -107,7 +107,7 @@ CREATE TABLE prefeituras_clinhvs (
 );
 
 CREATE TABLE prefeituras_cczs (
-    id_ccz INT SERIAL PRIMARY KEY NOT NULL,
+    id_ccz SERIAL PRIMARY KEY NOT NULL,
     id_relatorio VARCHAR,
     cczs_art BOOL,
     cczs_art_codigo VARCHAR,
@@ -120,7 +120,7 @@ CREATE TABLE prefeituras_cczs (
 );
 
 CREATE TABLE prefeituras_abatedouros (
-    id_abatedouro INT SERIAL PRIMARY KEY NOT NULL,
+    id_abatedouro SERIAL PRIMARY KEY NOT NULL,
     id_relatorio VARCHAR,
     abatedouro_art BOOL,
     abatedouro_art_registro VARCHAR,
@@ -138,7 +138,7 @@ CREATE TABLE tbl_registros_sof (
 );
 
 CREATE TABLE prefeituras_abatedouros_animais (
-    id_animal INT SERIAL PRIMARY KEY NOT NULL,
+    id_animal SERIAL PRIMARY KEY NOT NULL,
     id_abatedouro INT,
     cat_animal INT,
     CONSTRAINT fk_prefeituras_abatedouros_animais
@@ -147,7 +147,7 @@ CREATE TABLE prefeituras_abatedouros_animais (
 ); 
 
 CREATE TABLE prefeituras_visas (
-    id_visa INT SERIAL PRIMARY KEY NOT NULL,
+    id_visa SERIAL PRIMARY KEY NOT NULL,
     id_relatorio VARCHAR,
     visa_alvara BOOL,
     visa_medicamentos BOOL,
@@ -158,7 +158,7 @@ CREATE TABLE prefeituras_visas (
 ); 	
 
 CREATE TABLE prefeituras_manejo_fauna (
-    id_silvestre INT SERIAL PRIMARY KEY NOT NULL,
+    id_silvestre SERIAL PRIMARY KEY NOT NULL,
     id_relatorio VARCHAR,
     silvestre_tipo VARCHAR,
     silvestre_tipo_outro TEXT,
