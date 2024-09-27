@@ -1,4 +1,15 @@
-init.sql
+SET DATESTYLE TO PostgreSQL,European;
+
+CREATE DATABASE CRMV 
+    WITH 
+    TEMPLATE = template0 
+    ENCODING = 'UTF8' 
+    LC_COLLATE = 'en_US.utf8' 
+    LC_CTYPE = 'en_US.utf8';
+
+ALTER DATABASE CRMV OWNER TO postgress;
+
+\connect seu_db
 CREATE TABLE tbl_formularios (
     tp_form VARCHAR PRIMARY KEY,
     label_form TEXT,
