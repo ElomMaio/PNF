@@ -9,7 +9,6 @@ CREATE DATABASE CRMV
 
 ALTER DATABASE CRMV OWNER TO postgress;
 
-\connect CMRV
 CREATE TABLE tbl_formularios (
     tp_form VARCHAR PRIMARY KEY,
     label_form TEXT,
