@@ -7,7 +7,7 @@ CREATE DATABASE CRMV
     LC_COLLATE = 'en_US.utf8' 
     LC_CTYPE = 'en_US.utf8';
 
-ALTER DATABASE CRMV OWNER TO postgress;
+ALTER DATABASE CRMV OWNER TO postgres;
 
 CREATE TABLE tbl_formularios (
     tp_form VARCHAR PRIMARY KEY,
