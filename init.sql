@@ -1,13 +1,13 @@
 SET DATESTYLE TO PostgreSQL,European;
 
-CREATE DATABASE CRMV 
+CREATE DATABASE crmv 
     WITH 
     TEMPLATE = template0 
     ENCODING = 'UTF8' 
     LC_COLLATE = 'en_US.utf8' 
     LC_CTYPE = 'en_US.utf8';
 
-ALTER DATABASE CRMV OWNER TO postgres;
+\c crmv
 
 CREATE TABLE tbl_formularios (
     tp_form VARCHAR PRIMARY KEY,
